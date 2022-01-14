@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Skeleton application demoing Heroku and Flask integration.">
+    <meta name="author" content="@gotoariel">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+
+    <title>Evaluation result: Incremental Learning from Data Streams</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+      pre {
+        height: auto;
+        max-height: 200px;
+        overflow: auto;
+        background-color: #eeeeee;
+        word-break: normal !important;
+        word-wrap: normal !important;
+        white-space: pre !important;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div>
+          <h1>Evaluation</h1>
+          <h2>On entire data</h2>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RMSE</td>
+                <td>{{ rmse }}</td>
+              </tr>
+              <tr>
+                <td>RRMSE@1</td>
+                <td>{{ rrmse1 }}</td>
+              </tr>
+              <tr>
+                <td>RRMSE@4</td>
+                <td>{{ rrmse4 }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Intermediate results</h3>
+          <pre>{{ intermediate }}</pre>
+        </div>
+        <div>
+          <h2>On last 10 weeks</h2>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>L10_RMSE</td>
+                <td>{{ last10_rmse }}</td>
+              </tr>
+              <tr>
+                <td>L10_RRMSE@1</td>
+                <td>{{ last10_rrmse1 }}</td>
+              </tr>
+              <tr>
+                <td>L10_RRMSE@4</td>
+                <td>{{ last10_rrmse4 }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Intermediate results</h3>
+          <pre>{{ last10_intermediate }}</pre>
+        </div>
+        <div>
+          <h2>Visualizations</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

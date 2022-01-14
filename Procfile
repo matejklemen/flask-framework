@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: preprocess_truth.py && gunicorn app:app
