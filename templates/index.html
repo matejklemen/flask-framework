@@ -17,7 +17,9 @@
       <div class="row">
         <div class="col-lg-12">
           <h2>Evaluation of predictions</h2>
-          TODO instructions
+          Input is expected to be a plaintext file with one prediction per epidemic week, i.e. each prediction in its own row. <br />
+          <strong>Fresh data </strong> is fetched together with the first evaluation request after 8AM UTC, so the request might take a bit longer. <br />
+          If all stars align, on 16th January 8AM UTC, a special section in evaluation will open up, which will always contain evaluation only on data before 16th January (&leq; 15th). <br /> 
           <form method="POST" action="/evaluate" enctype="multipart/form-data">
             <input type="file" name="file" required />
             <input class="btn btn-primary" type="submit" value="Evaluate"/>
